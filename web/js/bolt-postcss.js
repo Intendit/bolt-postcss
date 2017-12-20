@@ -255,7 +255,7 @@ $(document).ready(function() {
             postcsspackage.postcssimporturl(),
             postcsspackage.cssvariables(),
             postcsspackage.postcsscalc(),
-            postcsspackage.autoprefixer({ browsers: ['last 2 versions'] }),
+            postcsspackage.autoprefixer({ browsers: ['last 4 versions'] }),
             postcsspackage.postcssExtend(),
             postcsspackage.csswring()
         ]).process($('.CodeMirror').get(0).CodeMirror.getValue(), {
