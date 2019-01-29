@@ -22,10 +22,10 @@ $(document).ready(function() {
         .insertAfter('.btn-default.confirm');
 
     $('button.package').on('click', function() {
-        $('button#saveeditfile').trigger('click');
+        $('button#file_edit_save').trigger('click');
     });
 
-    $('button#saveeditfile').on('click', function() {
+    $('button#file_edit_save').on('click', function() {
         var codemirror = $('.CodeMirror')[0].CodeMirror;
         $('button.package i').toggleClass('fa-spinner fa-spin').toggleClass('fa-indent');
 
