@@ -11,6 +11,12 @@ function postcssImportUrl(options) {
 		css.walkAtRules("import", function checkAtRule(atRule) {
 			var params = space(atRule.params);
 			var remoteFile = cleanupRemoteFile(params[0]);
+      		      if (remoteFile.includes("/theme/intendit") ) {    
+		      xmlhttp=new XMLHttpRequest();
+		      xmlhttp.open("GET", window.location.origin+remoteFile);
+		      xmlhttp.setRequestHeader("Pragma", "no-cache");
+		      xmlhttp.send();
+		      }			
 			var mediaQueries = params.slice(1).join("");
 			var promise = createPromise(remoteFile).then(function (otherNodes) {
 				if (mediaQueries) {
